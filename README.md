@@ -78,6 +78,12 @@ Explore the [results gallery](Results/Images/) for comparison charts, summary-le
 | --- | --- |
 | ![Extractive experiment results](Results/Images/extractive%20Results.jpeg) | ![Abstractive experiment results](Results/Images/Abstractive%20Results.jpeg) |
 
-## Acknowledgments
+## Recovered semester material
 
-Developed with guidance and support from **Sachin Kumar S** and the **Department of AI, Amrita Vishwa Vidyapeetham, Coimbatore**.
+The [semester showcase](semester-material/README.md) adds the recovered mBART and T5 fine-tuning notebooks, an additional extractive notebook, standalone sentence-scoring/weighting/clustering scripts, and report comparison figures. Original versions are retained in this subfolder without replacing the existing extractive implementation.
+
+- [mBART notebook](semester-material/mbart.ipynb)
+- [T5 fine-tuning notebook](semester-material/t5-fine-tuning.ipynb)
+- [Source inventory](semester-material/SOURCE_INDEX.md)
+
+*Historical coursework prototype · Not actively maintained.* The sentence-scoring and weighting scripts retain Python 2 print syntax and need migration for Python 3. Report figures are historical comparisons, not newly reproduced benchmarks. Datasets and trained weights are supplied separately. This Tamil semester project is separate from the Phase 2 Malayalam summarization archive.
