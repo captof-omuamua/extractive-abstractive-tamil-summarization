@@ -1,6 +1,6 @@
 # Source archive index
 
-`source.zip` preserves the recovered package structure. Editable copies have team identifiers and recognizable credentials redacted; notebook execution output was removed.
+`source.zip` keeps the original package structure. Credentials are removed and notebook outputs are cleared.
 
 - `Text_Summary_T5_Fine_Tuned (2).ipynb`
 - `mBART.ipynb`

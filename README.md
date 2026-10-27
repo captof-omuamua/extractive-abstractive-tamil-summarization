@@ -1,6 +1,15 @@
 # Extractive and Abstractive Text Summarization for Tamil
 
-A natural language processing project exploring ways to turn long Tamil documents into concise summaries. The work covers text preparation, three extractive summarization methods, and visual comparisons of extractive and abstractive experiment results.
+**Python · Tamil NLP · scikit-learn · mBART · mT5 · ROUGE evaluation**
+
+Turns long Tamil documents into concise summaries using two approaches: three extractive methods that select the most important sentences, and fine-tuned Transformer models that write new summary text. Every method is scored against reference summaries with ROUGE.
+
+## Results at a glance
+
+| Extractive methods | Abstractive models |
+| --- | --- |
+| ![Comparison of extractive summarization methods](semester-material/showcase/extractive-comparison.jpg) | ![Comparison of abstractive models](semester-material/showcase/abstractive-comparison.jpg) |
+| Sentence weighting scored highest on ROUGE-1 (about 0.52) and ROUGE-2; sentence clustering was best on ROUGE-L. | mT5 scored highest on all three measures: ROUGE-1 0.47, ROUGE-2 0.33, ROUGE-L 0.42. |
 
 ## Summarization methods
 
@@ -36,6 +45,7 @@ extractive/
     extractive.ipynb       # Extractive summarization notebook
 Results/
     Images/               # Experiment results and visualizations
+semester-material/        # mBART and T5 notebooks, standalone scripts
 README.md
 ```
 
@@ -70,20 +80,21 @@ nltk.download("punkt")
 nltk.download("punkt_tab")
 ```
 
-## Results
+## More results
 
-Explore the [results gallery](Results/Images/) for comparison charts, summary-length distributions, t-SNE plots, and abstractive experiment figures.
+The [results gallery](Results/Images/) has summary-length distributions, word-frequency analysis, t-SNE plots of the clustering and weighting methods, and abstractive hyperparameter settings.
 
 | Extractive experiments | Abstractive experiments |
 | --- | --- |
 | ![Extractive experiment results](Results/Images/extractive%20Results.jpeg) | ![Abstractive experiment results](Results/Images/Abstractive%20Results.jpeg) |
 
-## Recovered semester material
+## Abstractive models and standalone scripts
 
-The [semester showcase](semester-material/README.md) adds the recovered mBART and T5 fine-tuning notebooks, an additional extractive notebook, standalone sentence-scoring/weighting/clustering scripts, and report comparison figures. Original versions are retained in this subfolder without replacing the existing extractive implementation.
+The [semester-material](semester-material/README.md) folder holds the Transformer experiments and the extractive methods as standalone Python scripts:
 
 - [mBART notebook](semester-material/mbart.ipynb)
 - [T5 fine-tuning notebook](semester-material/t5-fine-tuning.ipynb)
+- [Sentence scoring](semester-material/sentence_scoring.py), [sentence weighting](semester-material/sentence_weighing.py) and [sentence clustering](semester-material/sentence_clustering.py) scripts
 - [Source inventory](semester-material/SOURCE_INDEX.md)
 
-*Historical coursework prototype · Not actively maintained.* The sentence-scoring and weighting scripts retain Python 2 print syntax and need migration for Python 3. Report figures are historical comparisons, not newly reproduced benchmarks. Datasets and trained weights are supplied separately. This Tamil semester project is separate from the Phase 2 Malayalam summarization archive.
+Datasets and trained weights are not stored in the repository; see the notebooks for the expected paths.
